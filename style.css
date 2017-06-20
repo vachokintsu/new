@@ -1,3 +1,30 @@
+@font-face {
+    font-family: 'BPGArial';
+    src: url('font/BPGArial.eot?#iefix') format('embedded-opentype'),
+        url('font/BPGArial.woff') format('woff'),
+        url('font/BPGArial.ttf')  format('truetype'),
+        url('font/BPGArial.svg#BPGArial') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BPGBannerCaps';
+    src: url('font/BPGBannerCaps.eot?#iefix') format('embedded-opentype'),  
+        url('font/BPGBannerCaps.woff') format('woff'), 
+        url('font/BPGBannerCaps.ttf')  format('truetype'), 
+        url('font/BPGBannerCaps.svg#BPGBannerCaps') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('font/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),  
+        url('font/fontawesome-webfont.woff') format('woff'), 
+        url('font/fontawesome-webfont.ttf')  format('truetype'), 
+        url('font/fontawesome-webfont.svg#BPGBannerCaps') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     width: 100%;
     background-color: #660000;
@@ -5,13 +32,12 @@ body {
 }
 /* header */
 
-.header {
+.header-block {
     width: 100%;
     margin: 0;
     padding: 0;
     z-index: 3;
-    border-top: 5px solid #76c38f;
-    background: rgba(41, 0, 0, 0.6);
+    background: #ffffff;
 }
 .menu-resp {
     list-style: none;
@@ -34,7 +60,7 @@ body {
     width: 200px;
     background-color: #303030;
 }
-.menu {
+.header {
     max-width: 80%;
     margin: 0 auto;
     z-index: 5;
@@ -52,341 +78,240 @@ body {
         margin-left: 17.5px;
     }
 }
-
+.header .logo {
+    margin:25px 0px 15px 0px;
+}
+.header .logo img {
+    width: 100%;
+}
+.header-top {
+    width: 100%;
+}
+.header-top div{
+    float: right;
+    background-color: #f5f5f5; 
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-sizing: border-box;
+}
+.header-top div i {
+    float: left;
+    color: #58585a;
+    font-size: 14px;
+    line-height: 29px;
+    font-style: normal;
+    display: block;
+    font-family: FontAwesome;
+    text-align: center;
+    text-decoration: none;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.header-top div span {
+    float: left;
+    color: #58585a;
+    font-size: 14px;
+    line-height: 29px;
+    font-style: normal;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+.header-top div p {
+    float: left;
+    color: #58585a;
+    font-size: 14px;
+    line-height: 29px;
+    font-style: normal;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 29px;
+    margin: 0px !important;
+    padding-right: 30px;
+    padding-left: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-sizing: border-box;
+}
+.header-top div a {
+    float: right;
+    color: #58585a;
+    font-size: 14px;
+    font-style: normal;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 4px;
+    margin-bottom: 4px; 
+    line-height: 21px;
+    text-align: center;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+    margin-right: 1px;
+    transition: 0.5s;
+}
+.header-menu-lang-divider {
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    padding-right: 2.5px !important;
+    margin-left: 20px !important;
+}
+.header-top div a:hover {
+    text-decoration: underline;
+}
 .uk-nav li {
     float: right !important;
 }
-.logo ul {
-    list-style: none;
-    margin-top: 25px;
-    left: 0px;
-    margin-left: 0px !important;
-    padding: 0 !important;
+.menu {
+    width: 100%;
+    box-sizing: border-box;
 }
-.logo ul .logo-1 {
-    font-size: 28px;
-    font-family: "Georgia";
-    color: #FFFFFF;
-    text-align: left;
-    top: 25px;
+.menu ul {
+    float: right !important;
+    background-color: #f5f5f5;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 0px !important;
 }
-.logo ul .logo-2 {
-    font-size: 11px;
-    font-family: "Georgia";
-    color: rgb(151, 151, 151);
-    text-align: left;
-    top: 56px;
-    letter-spacing: 1px;
-}
-.menu-in {
+.menu {
     width: 100%;
     right: 0px;
-    margin-top: 25px;
 }
-.menu-in ul li {
-    border-radius: 5px;
-    margin-right: 15px;
+.menu ul li a i {
+    color: #58585a;
+    font-size: 18px;
+    font-style: normal;
+    display: block;
+    font-family: FontAwesome;
+    text-align: center;
+    text-decoration: none;
 }
-.menu-in ul li a {
-    font-size: 13px;
-    font-family: "Georgia";
-    color: rgb(255, 255, 255);
-    padding: 5px 15px 3px 15px !important;
+.menu ul li a {
+    font-size: 18px;
+    font-family: BPGBannerCaps;
+    color: #58585a;
+    padding: 10px !important;
     border-radius: 5px;
     transition: 0.5s;
 }
-.menu-in ul li a:hover {
-    background-color: rgb(118, 195, 143);
-    border-radius: 5px;
+.menu-button-icon {
+    float: right;
+    color: #58585a;
+    padding: 2px 0px 2px 6px;
+    font-size: 14px;
+    font-style: normal;
+    display: block;
+    font-family: FontAwesome;
+    text-align: center;
+    text-decoration: none;
 }
-.menu-in .uk-active {
-    background-color: rgb(118, 195, 143);
-    border-radius: 5px;
+.menu-drop ul li, .menu-drop ul hr {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
 }
+
 /* slider */
 
 .slider {
     margin: 0 auto;
     left: 0px;
     width: 100%;
-    height: 525px;
+    height: 400px;
     margin-top: 0px;
     z-index: 2;
     background: rgba(41, 0, 0, 0.6);
 }
 .slider .uk-slideshow {
-    height: 525px !important;
+    height: 400px !important;
     list-style: none;
     padding: 0 !important;
 }
 .slider .uk-slideshow li {
-    height: 525px;
+    height: 400px;
     margin-top: 0px;
     list-style: none;
 }
 .slider .uk-slideshow li img {
-    height: 525px;
+    height: 400px;
     width: 100%;
     padding: 0 !important;
     margin: 0 !important;
 }
+.uk-dotnav a {
+    width: 30px;
+    height: 15px;
+    border-radius: 0px !important;
+    background-color: #ed1c24;
+}
+.uk-dotnav li {
+    padding: 20px 10px;
+    background-color: rgba(88, 88, 90, 0.5);
+}
+.uk-dotnav li:first-child {
+    padding-left: 20px;
+}
+.uk-dotnav li:last-child {
+    padding-right: 20px;
+}
+.slider-dot {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+.uk-dotnav {
+    justify-content: left;
+}
 /* content */
 
 .wrap {
-    max-width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
-.service {
-    margin-top: 60px;
+
+.product-block {
+    background-color: #f0f0f0;
+    padding-top: 30px;
+    margin: 0;
 }
-.service .uk-width-medium-1-4 {
-    margin-bottom: 40px;
-}
-.service-item {
-    width: 100%;
-    background-color: #ffffff;
-    text-align: center;
-    padding: 20px 0px;
-    transition: 0.5s;
-}
-.service-item:hover {
-    background-color: #76c38f;
-    cursor: pointer;
-}
-.service-item img {
-    width: 100%;
-    max-width: 120px;
-}
-.service-item h1 {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 10px;
-    font-size: 32px;
-    font-family: "Georgia";
-    color: rgb(51, 51, 51);
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-.service-item p {
+.product {
     width: 80%;
     margin: 0 auto;
-    padding-top: 10px;
-    font-size: 12px;
-    font-family: "Georgia";
-    color: rgb(151, 151, 151);
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
-.service-item:hover h1,
-.service-item:hover p {
-    color: rgb(255, 255, 255);
-}
-.wrap-work-title {
-    position: relative;
-}
-.wrap-work-title hr {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    margin-top: -2.5px;
-    border: 2.5px solid #303030;
-}
-.wrap-work-title h1 {
-    margin: 0 auto;
-    color: rgb(255, 255, 255);
-    font-family: "Georgia";
-    padding: 10px 25px;
-    background-color: #303030;
-    text-align: center;
-    border-radius: 5px;
-    max-width: 300px;
-    position: relative;
-}
-/* lorem */
-
-.lorem {
-    margin-top: 30px;
+.product-list {
     padding-bottom: 30px;
-}
-.lorem-item {
     position: relative;
-    width: 100%;
-    border: 5px solid #ffffff;
-    overflow: hidden;
-    transition: 0.5s;
-    margin-bottom: 30px !important;
-}
-.lorem-item:hover {
     cursor: pointer;
-    border: 5px solid #76c38f;
+    overflow: hidden;
 }
-.lorem-item img {
+.product-list img {
     width: 100%;
+    box-sizing: border-box;
 }
-.lorem-item h1 {
+.product-list p {
     position: absolute;
     width: 100%;
+    padding: 10px;
+    line-height: 30px;
     margin: 0 auto;
-    bottom: 0;
-    transform: translateY(100%);
+    top: 0;
+    transform: translateY(-100%);
     transition: 0.5s;
-    background-color: #151515;
-    font-size: 14px;
-    font-family: "Georgia";
+    background-color: rgba(88, 88, 90, 0.5);
+    font-size: 24px;
+    font-family: BPGBannerCaps;
     color: rgb(255, 255, 255);
     text-align: center;
+    box-sizing: border-box;
 }
-.lorem-item:hover h1 {
+.product-list:hover p {
     transform: translateY(0%);
-}
-/* footer */
-
-.footer {
-    padding-top: 40px;
-    background-color: #303030;
-}
-.footer h1 {
-    width: 100%;
-    font-size: 16px;
-    font-family: "Georgia";
-    color: rgb(255, 255, 255);
-    text-align: left;
-}
-.footer p {
-    width: 100%;
-    font-size: 13px;
-    font-family: "Georgia";
-    color: rgb(118, 195, 143);
-    text-align: left;
-    margin-bottom: 5px !important;
-}
-.footer-text-1 {
-    width: 100%;
-    top: 0px;
-    font-size: 10px;
-    font-family: "Georgia";
-    color: rgb(151, 151, 151);
-    text-align: left;
-}
-.footer-text-1 span {
-    font-size: 10px;
-    font-family: "Georgia";
-    color: rgb(118, 195, 142);
-    text-align: left;
-}
-.footer-text-2 {
-    width: 100%;
-    font-size: 10px;
-    font-family: "Georgia";
-    color: rgb(151, 151, 151);
-    text-align: left;
-}
-.footer-text-3 {
-    width: 100%;
-    font-size: 13px;
-    font-family: "Georgia";
-    color: rgb(151, 151, 151);
-    text-align: left;
-}
-.footer-item a {
-    width: 100%;
-    font-size: 13px;
-    font-family: "Georgia";
-    color: rgb(118, 195, 143);
-    text-align: left;
-}
-.footer-item a span {
-    font-size: 8px;
-    vertical-align: center;
-    letter-spacing: 0px;
-}
-.footer-quick-link {
-    width: 100%;
-    margin-top: 10px;
-    border-bottom: 1px solid #404040;
-    padding-bottom: 4px;
-}
-.footer-quick-link {
-    font-size: 13px;
-    font-family: "Georgia";
-    color: rgb(118, 195, 143);
-    text-align: left;
-}
-.footer-text-4 {
-    width: 100%;
-    font-size: 13px;
-    font-family: "Georgia";
-    color: rgb(151, 151, 151);
-    text-align: left;
-}
-.footer-item:first-child .footer-text-4 {
-    margin-bottom: 35px;
-}
-.footer-text-4 span {
-    color: rgb(118, 195, 143);
-}
-.footer-item input {
-    width: 100%;
-    padding: 10px;
-    text-align: left;
-    border: none;
-    background-color: #222222;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    font-size: 13px;
-    font-family: "Georgia";
-    color: rgb(152, 152, 152);
-}
-.footer-item textarea {
-    width: 100%;
-    padding: 10px;
-    min-height: 80px;
-    text-align: left;
-    border: none;
-    background-color: #222222;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    font-size: 13px;
-    font-family: "Georgia";
-    color: rgb(152, 152, 152);
-}
-.footer-item button {
-    padding: 10px 15px;
-    text-align: left;
-    border: none;
-    background-color: #76c38f;
-    border-radius: 10px;
-    font-size: 12px;
-    font-family: "Georgia";
-    color: rgb(48, 48, 48);
-    transition: 0.5s;
-}
-.footer-item button:hover {
     cursor: pointer;
-    background-color: #45a464;
 }
-/* copyright */
 
-.copyright {
-    width: 100%;
-    border-top: 1px solid #3a3a3a;
-    background-color: #2b2b2b;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    border-bottom: 5px solid #303030;
-}
-.copyright-left p {
-    font-size: 13px;
-    font-family: "Georgia";
-    color: rgb(151, 151, 151);
-    text-align: left;
-}
-.copyright-right p {
-    font-size: 13px;
-    font-family: "Georgia";
-    color: rgb(151, 151, 151);
-    text-align: right;
-}
